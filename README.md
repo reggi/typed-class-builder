@@ -11,6 +11,7 @@ import everything from './build/Everything';
 
 const name = everything
   .string('thomas')
+  .length
   .alphaNumber // 76
   .letter // d
   .uppercase // D

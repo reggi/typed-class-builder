@@ -22,5 +22,4 @@ export class Everything {
 }
 
 const everything = new Everything()
-
 export default everything;
