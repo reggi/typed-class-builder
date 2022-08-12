@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "tsx ./parser.ts",
+    "start": "tsx ./usage.ts"
+  },
+  "dependencies": {
+    "ts-morph": "^15.1.0",
+    "@types/node": "^18.7.1",
+    "tsx": "^3.8.2"
+  }
+}
