@@ -1,3 +1,4 @@
+import EveryString from './build/EveryString';
 import everything from './build/Everything';
 
 const name = everything
@@ -26,7 +27,8 @@ const name = everything
   .concat("123") // a hello world123
   .alphaOnly // ahelloworld
   .alphaNumber // 125
-  
+  .useSnaps(v => EveryString.string(`${v.name} ${v.bonkers}`))
+  .alphaOnly
 
 console.log(name.value)
 console.log(name.snaps)

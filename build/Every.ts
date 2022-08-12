@@ -1,3 +1,4 @@
+import { timeStamp } from "console";
 import { State } from "./State"
 
 export default class Every<T> {
@@ -41,5 +42,8 @@ export default class Every<T> {
   sidechain (name: string | ((chain: this) => Every<any>), cb?: (chain: this) => Every<any>) {
     return this.sideSnap(name, cb)
   }
- 
+
+  useSnaps<T extends Every<any>> (cb: (chain: any) => T): T {
+    return cb(this.snaps)
+  }
 }

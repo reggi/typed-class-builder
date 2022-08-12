@@ -13,6 +13,9 @@ import {
 import EveryString from "./EveryString";
 
 export default class EveryNumber extends Every<number> {
+  static number(value: number) {
+    return new EveryNumber().number(value);
+  }
   number(value: number) {
     const current = this.value;
     const result = number_number(current, value);

@@ -7,6 +7,7 @@ import {
 import EveryNumber from "./EveryNumber";
 
 export default class EveryDateArray extends Every<Date[]> {
+  
   get validate() {
     const current = this.value;
     const result = dates_validate(current);

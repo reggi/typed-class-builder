@@ -8,6 +8,7 @@ import {
 import EveryNumber from "./EveryNumber";
 
 export default class EveryStringArray extends Every<string[]> {
+  
   get validate() {
     const current = this.value;
     const result = strings_validate(current);

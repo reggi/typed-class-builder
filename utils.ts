@@ -37,6 +37,13 @@ ${imports.map(({ returnClass }) => {
 }).join('\n')}
 
 export default class ${options.className} extends Every<${options.returnType}> {
+  ${methods.filter(({ isTypedName }) => isTypedName).map(method => {
+    const { returnClass, methodName } = method;
+    return `
+  static ${methodName}(value: ${options.returnType}) {
+    return new ${returnClass}().${methodName}(value);
+  }\n`.trim()
+  })}
   ${methods.map(method => {
     const { returnClass, methodName, calledArguments, functionName, typedArguments, methodPrefix } = method;
     return `

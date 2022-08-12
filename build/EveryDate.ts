@@ -8,6 +8,9 @@ import {
 import EveryNumber from "./EveryNumber";
 
 export default class EveryDate extends Every<Date> {
+  static date(value: Date) {
+    return new EveryDate().date(value);
+  }
   date(value: Date) {
     const current = this.value;
     const result = date_date(current, value);

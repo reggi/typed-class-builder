@@ -17,6 +17,9 @@ import EveryStringArray from "./EveryStringArray";
 import EveryNumber from "./EveryNumber";
 
 export default class EveryString extends Every<string> {
+  static string(value: string) {
+    return new EveryString().string(value);
+  }
   string(value: string) {
     const current = this.value;
     const result = string_string(current, value);
